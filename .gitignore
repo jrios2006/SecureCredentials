@@ -1,0 +1,46 @@
+
+# Compilacion y archivos temporales de .NET
+**/bin/
+**/obj/
+**/TestResults/
+**/coverage/
+*.user
+*.suo
+
+# Entregables generados
+/dist/
+/publish/
+
+# Configuracion de editores
+.vs/
+.vscode/
+.idea/
+*.swp
+*~
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Registros y volcados
+*.log
+*.dmp
+*.stackdump
+
+# Credenciales, claves y certificados privados
+*.enc
+*.key
+*.pem
+*.pfx
+*.p12
+*.snk
+.env
+.env.*
+secrets.json
+appsettings.*.local.json
+credentials.json
+
+# Archivos temporales y copias
+*.tmp
+*.bak
+*.orig

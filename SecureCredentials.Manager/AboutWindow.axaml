@@ -1,0 +1,136 @@
+<!-- Archivo: AboutWindow.axaml | Proyecto: SecureCredentials.Manager | Descripción: Vista de información del producto. Presenta versiones y metadatos del gestor y de la biblioteca. -->
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="SecureCredentials.Manager.AboutWindow"
+        Title="Acerca de SecureCredentials"
+        Icon="/Assets/securecredentials.ico"
+        Width="500"
+        Height="420"
+        MinWidth="450"
+        MinHeight="380"
+        CanResize="False"
+        ShowInTaskbar="False"
+        WindowStartupLocation="CenterOwner">
+
+    <Grid RowDefinitions="*,Auto"
+          Margin="24">
+
+        <ScrollViewer Grid.Row="0"
+                      VerticalScrollBarVisibility="Auto">
+
+            <StackPanel Spacing="12">
+
+                <!-- Identidad de la aplicación -->
+                <StackPanel Orientation="Horizontal"
+                            Spacing="16">
+
+                    <Image Source="/Assets/securecredentials.png"
+                           Width="64"
+                           Height="64"/>
+
+                    <StackPanel VerticalAlignment="Center"
+                                Spacing="4">
+
+                        <TextBlock Text="SecureCredentials Manager"
+                                   FontSize="21"
+                                   FontWeight="Bold"/>
+
+                        <TextBlock x:Name="ManagerVersionText"
+                                   Text="Versión"
+                                   FontSize="14"/>
+
+                    </StackPanel>
+
+                </StackPanel>
+
+                <Separator Margin="0,8"/>
+
+                <!-- Descripción -->
+                <TextBlock x:Name="DescriptionText"
+                           TextWrapping="Wrap"
+                           Text="Administrador de documentos cifrados."/>
+
+                <!-- Datos del producto -->
+                <Grid ColumnDefinitions="135,*"
+                      RowDefinitions="Auto,Auto,Auto,Auto,Auto"
+                      RowSpacing="10"
+                      ColumnSpacing="8"
+                      Margin="0,8,0,0">
+
+                    <TextBlock Grid.Row="0"
+                               Grid.Column="0"
+                               Text="Biblioteca:"
+                               FontWeight="SemiBold"/>
+
+                    <TextBlock Grid.Row="0"
+                               Grid.Column="1"
+                               x:Name="LibraryVersionText"/>
+
+                    <TextBlock Grid.Row="1"
+                               Grid.Column="0"
+                               Text="Algoritmo:"
+                               FontWeight="SemiBold"/>
+
+                    <TextBlock Grid.Row="1"
+                               Grid.Column="1"
+                               Text="AES-256-GCM"/>
+
+                    <TextBlock Grid.Row="2"
+                               Grid.Column="0"
+                               Text="Formato:"
+                               FontWeight="SemiBold"/>
+
+                    <TextBlock Grid.Row="2"
+                               Grid.Column="1"
+                               Text="SecureCredentials .enc v2"/>
+
+                    <TextBlock Grid.Row="3"
+                               Grid.Column="0"
+                               Text="Autor / Empresa:"
+                               FontWeight="SemiBold"/>
+
+                    <TextBlock Grid.Row="3"
+                               Grid.Column="1"
+                               x:Name="CompanyText"
+                               TextWrapping="Wrap"/>
+
+                    <TextBlock Grid.Row="4"
+                               Grid.Column="0"
+                               Text="Plataforma:"
+                               FontWeight="SemiBold"/>
+
+                    <TextBlock Grid.Row="4"
+                               Grid.Column="1"
+                               Text=".NET 10 / Avalonia"/>
+
+                </Grid>
+
+                <Separator Margin="0,8"/>
+
+                <TextBlock x:Name="CopyrightText"
+                           TextWrapping="Wrap"
+                           FontSize="12"
+                           Opacity="0.75"/>
+
+            </StackPanel>
+
+        </ScrollViewer>
+
+        <!-- Botón de cierre -->
+        <StackPanel Grid.Row="1"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    Margin="0,16,0,0">
+
+            <Button Content="Cerrar"
+                    Width="100"
+                    HorizontalContentAlignment="Center"
+                    IsDefault="True"
+                    IsCancel="True"
+                    Click="Close_Click"/>
+
+        </StackPanel>
+
+    </Grid>
+
+</Window>

@@ -1,0 +1,81 @@
+<!-- Archivo: MainWindow.axaml | Proyecto: SecureCredentials.Manager | Descripción: Vista principal del gestor. Incluye acciones de archivo, controles de tamaño de letra, editor y barra de estado. -->
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="SecureCredentials.Manager.MainWindow"
+        Title="SecureCredentials Manager"
+        Icon="/Assets/securecredentials.ico"
+        Width="1000"
+        Height="700"
+        MinWidth="650"
+        MinHeight="450"
+        WindowStartupLocation="CenterScreen">
+
+    <DockPanel Margin="12">
+
+        <!-- Barra de estado -->
+        <Border DockPanel.Dock="Bottom"
+                Padding="8"
+                Background="#E8EDF2"
+                CornerRadius="5">
+
+            <TextBlock x:Name="StatusText"
+                       Text="Listo"
+                       Foreground="#263238"/>
+
+        </Border>
+
+        <!-- Barra de herramientas -->
+        <StackPanel DockPanel.Dock="Top"
+                    Orientation="Horizontal"
+                    Spacing="8"
+                    Margin="0,0,0,12">
+
+            <Button Content="Nuevo"
+                    Click="New_Click"/>
+
+            <Button Content="Abrir cifrado"
+                    Click="Open_Click"/>
+
+            <Button Content="Guardar cifrado"
+                    Click="Save_Click"/>
+
+            <Button Content="Validar JSON"
+                    Click="ValidateJson_Click"/>
+
+            <Button Content="A−"
+                    ToolTip.Tip="Reducir tamaño de letra (Ctrl + -)"
+                    Click="DecreaseFont_Click"/>
+
+            <Button Content="A+"
+                    ToolTip.Tip="Aumentar tamaño de letra (Ctrl + +)"
+                    Click="IncreaseFont_Click"/>
+
+            <Button Content="Acerca de"
+                    Click="About_Click"/>
+
+        </StackPanel>
+
+        <!-- Editor principal -->
+        <Grid RowDefinitions="Auto,*">
+
+            <TextBlock Grid.Row="0"
+                       x:Name="FileNameText"
+                       Text="Documento nuevo"
+                       FontWeight="SemiBold"
+                       Margin="0,0,0,8"/>
+
+            <TextBox Grid.Row="1"
+                     x:Name="Editor"
+                     AcceptsReturn="True"
+                     AcceptsTab="True"
+                     TextWrapping="NoWrap"
+                     FontFamily="Monospace"
+                     FontSize="16"
+                     ScrollViewer.VerticalScrollBarVisibility="Auto"
+                     ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                     PlaceholderText="Introduce aquí JSON, XML o texto..."/>
+
+        </Grid>
+
+    </DockPanel>
+</Window>
