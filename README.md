@@ -4,6 +4,20 @@
 
 Está orientada a aplicaciones que necesitan guardar información confidencial en archivos locales, evitando que su contenido pueda leerse directamente. La solución incluye una biblioteca reutilizable, una aplicación de demostración, pruebas automatizadas y una aplicación gráfica de administración basada en Avalonia.
 
+## Descargas oficiales
+
+Las versiones publicadas en GitHub Releases son independientes:
+
+| Componente | Versión | Descarga |
+|---|---|---|
+| Biblioteca .NET 10 | `1.0.0` | [SecureCredentials.1.0.0.nupkg](https://github.com/jrios2006/SecureCredentials/releases/download/v1.0.0/SecureCredentials.1.0.0.nupkg) |
+| Manager Linux x64 | `1.0.1` | [Paquete TAR.GZ](https://github.com/jrios2006/SecureCredentials/releases/download/v1.0.1/SecureCredentials.Manager-1.0.1-linux-x64.tar.gz) |
+| Manager Windows x64 | `1.0.1` | [Paquete ZIP](https://github.com/jrios2006/SecureCredentials/releases/download/v1.0.1/SecureCredentials.Manager-1.0.1-win-x64.zip) |
+
+Las sumas de comprobación se encuentran en [SHA256SUMS-linux-x64.txt](https://github.com/jrios2006/SecureCredentials/releases/download/v1.0.1/SHA256SUMS-linux-x64.txt) y [SHA256SUMS-win-x64.txt](https://github.com/jrios2006/SecureCredentials/releases/download/v1.0.1/SHA256SUMS-win-x64.txt). Consulta la [guía de distribución](GUIA_DISTRIBUCION.md) para instalar y verificar cada paquete. El `.nupkg` se distribuye como archivo adjunto a GitHub Releases; esto no implica que esté publicado en NuGet.org.
+
+**Importante:** los paquetes del Manager son autocontenidos, pero no constituyen instaladores firmados. La protección del almacenamiento en Windows no tiene aún las mismas garantías verificadas que en Linux. La clave de demostración integrada no es apropiada para secretos reales de alto valor.
+
 ## Características principales
 
 - Cifrado autenticado mediante **AES-256-GCM**.

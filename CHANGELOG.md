@@ -26,6 +26,13 @@ Este historial sigue las convenciones de [Keep a Changelog](https://keepachangel
 
 - Se comprobó la creación de `manager.log` en Windows bajo `%USERPROFILE%\.local\state\securecredentials-manager\`.
 
+#### Distribución publicada — 2026-10-29
+- Publicados los paquetes del Manager `1.0.1` para **Linux x64** (`.tar.gz`) y **Windows x64** (`.zip`) en la misma [Release v1.0.1](https://github.com/jrios2006/SecureCredentials/releases/tag/v1.0.1), cada uno con su archivo de sumas SHA-256.
+- La distribución Windows se compiló en modo Release con SDK .NET 10.0.403; **106 pruebas superadas, 0 fallidas y 0 omitidas**.
+- Se comprobó la extracción y el arranque del ZIP de Windows fuera del directorio de compilación; su SHA-256 coincide con el digest publicado en GitHub.
+- Se actualizaron las instrucciones de descarga, instalación y verificación de los entregables para ambas plataformas.
+- No se modifica la versión de la biblioteca (`1.0.0`) ni el formato cifrado (`.enc` v2).
+
 #### Notas de compatibilidad
 - El lanzador aplica `XMODIFIERS=@im=none`, `GTK_IM_MODULE=xim` y `QT_IM_MODULE=xim` únicamente al proceso de la aplicación. No modifica la configuración global del sistema.
 - La solución de entrada de teclado se comprobó en Cinnamon/X11 con configuración regional española; no se considera una corrección universal para todos los métodos de entrada de Linux.
